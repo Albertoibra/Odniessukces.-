@@ -1,0 +1,160 @@
+<!doctype html>
+<html lang="pl">
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width,initial-scale=1" />
+<title>OdnieśSukces — Kursy Giełdowe Online</title>
+<style>
+:root{--accent:#0b74de;--text:#111827;--muted:#6b7280;--bg:#ffffff;--container:1100px;font-family:Inter, system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial;}
+body{margin:0;background:var(--bg);color:var(--text);line-height:1.5;}
+.container{max-width:var(--container);margin:0 auto;padding:1rem;}
+header{border-bottom:1px solid #e5e7eb;position:sticky;top:0;background:#fff;z-index:10;}
+.header-inner{display:flex;justify-content:space-between;align-items:center;}
+.logo{font-size:1.4rem;font-weight:800;text-decoration:none;color:var(--text);}
+.accent{color:var(--accent);}
+.nav{display:flex;gap:1rem;}
+.nav a{text-decoration:none;color:var(--muted);font-weight:600;}
+.menu-toggle{display:none;background:none;border:0;font-size:1.3rem;}
+.hero{background:linear-gradient(180deg,#f8fbff 0%,#fff 100%);padding:3rem 0;text-align:center;}
+.hero h1{font-size:2rem;margin-bottom:.5rem;}
+.hero p{color:var(--muted);max-width:600px;margin:0 auto 1.2rem;}
+.hero-cta{display:flex;justify-content:center;gap:.75rem;flex-wrap:wrap;}
+.btn{display:inline-block;padding:.6rem 1rem;border-radius:8px;background:var(--accent);color:#fff;border:0;text-decoration:none;font-weight:700;cursor:pointer;}
+.btn-outline{background:transparent;color:var(--accent);border:2px solid var(--accent);}
+.about, .work, .contact{padding:2rem 0;}
+.features{list-style:none;padding:0;margin:.75rem 0 0;display:flex;gap:.5rem;flex-wrap:wrap;}
+.features li{background:#eef3ff;padding:.4rem .6rem;border-radius:6px;color:var(--muted);}
+.grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(240px,1fr));gap:1rem;}
+.card{border:1px solid #e5e7eb;border-radius:8px;padding:1rem;box-shadow:0 2px 6px rgba(16,24,40,0.03);}
+.card-img{font-size:2rem;text-align:center;margin-bottom:.5rem;}
+.card-foot{display:flex;justify-content:space-between;align-items:center;margin-top:.75rem;}
+.price{font-weight:700;color:var(--accent);}
+.contact-form label{display:block;margin-bottom:.75rem;font-weight:600;color:var(--muted);}
+.contact-form input,.contact-form textarea{width:100%;padding:.6rem;border:1px solid #d1d5db;border-radius:6px;margin-top:.25rem;}
+.form-actions{display:flex;gap:.5rem;margin-top:.75rem;flex-wrap:wrap;}
+.form-note{margin-top:.5rem;color:var(--muted);}
+.site-footer{text-align:center;border-top:1px solid #e5e7eb;padding:1rem 0;color:var(--muted);font-size:.9rem;}
+.modal{position:fixed;inset:0;display:none;align-items:center;justify-content:center;z-index:100;}
+.modal-panel{background:#fff;padding:2rem;border-radius:10px;max-width:400px;width:90%;box-shadow:0 5px 20px rgba(0,0,0,0.1);text-align:center;}
+.modal-close{position:absolute;top:1rem;right:1rem;background:none;border:0;font-size:1.3rem;cursor:pointer;}
+.backdrop{position:fixed;inset:0;background:rgba(0,0,0,0.4);display:none;}
+</style>
+</head>
+<body>
+<header class="site-header">
+<div class="container header-inner">
+<a class="logo" href="#">Odnieś<span class="accent">Sukces</span></a>
+<nav class="nav">
+<a href="#about">O nas</a>
+<a href="#courses">Kursy</a>
+<a href="#contact">Kontakt</a>
+</nav>
+<button class="menu-toggle" aria-label="menu">☰</button>
+</div>
+</header>
+<main>
+<section class="hero">
+<div class="container">
+<h1>Odkryj świat giełdy i naucz się inwestować mądrze</h1>
+<p>Fikcyjna platforma edukacyjna, która pomaga zrozumieć rynki finansowe w prosty i przystępny sposób. Ucz się przez zabawę — bez ryzyka prawdziwych strat!</p>
+<div class="hero-cta">
+<a href="#courses" class="btn">Zobacz kursy</a>
+<a href="#contact" class="btn btn-outline">Skontaktuj się</a>
+</div>
+</div>
+</section>
+<section id="about" class="container about">
+<h2>O nas</h2>
+<p>OdnieśSukces to projekt edukacyjny, który w przystępny sposób wprowadza Cię w świat giełdy. Wszystkie przykłady i sytuacje są fikcyjne — służą nauce, nie inwestowaniu prawdziwych środków.</p>
+<ul class="features">
+<li>Ćwiczenia na symulowanych rynkach</li>
+<li>Analiza trendów i wykresów</li>
+<li>Interaktywne scenariusze decyzji</li>
+</ul>
+</section>
+<section id="courses" class="container work">
+<h2>Nasze kursy</h2>
+<div class="grid">
+<article class="card">
+<div class="card-img" aria-hidden="true">📈</div>
+<h3>Podstawy giełdy</h3>
+<p>Naucz się podstaw działania rynku, zleceń i inwestowania.</p>
+<div class="card-foot">
+<span class="price">29,99 zł</span>
+<button class="btn buy-btn" data-title="Podstawy giełdy">Kup</button>
+</div>
+</article>
+<article class="card">
+<div class="card-img" aria-hidden="true">💹</div>
+<h3>Strategie inwestycyjne</h3>
+<p>Poznaj symulowane strategie inwestorów i zobacz ich skutki.</p>
+<div class="card-foot">
+<span class="price">29,99 zł</span>
+<button class="btn buy-btn" data-title="Strategie inwestycyjne">Kup</button>
+</div>
+</article>
+<article class="card">
+<div class="card-img" aria-hidden="true">🧠</div>
+<h3>Psychologia inwestowania</h3>
+<p>Zrozum emocje i decyzje — klucz do sukcesu na rynku.</p>
+<div class="card-foot">
+<span class="price">29,99 zł</span>
+<button class="btn buy-btn" data-title="Psychologia inwestowania">Kup</button>
+</div>
+</article>
+</div>
+</section>
+<section id="contact" class="container contact">
+<h2>Kontakt</h2>
+<p>Masz pytania? Napisz do nas:</p>
+<form id="contactForm" class="contact-form">
+<label>Twoje imię<input type="text" name="name" required /></label>
+<label>E-mail<input type="email" name="email" required /></label>
+<label>Wiadomość<textarea name="message" rows="4" required></textarea></label>
+<div class="form-actions">
+<button type="submit" class="btn">Wyślij</button>
+<a class="btn btn-outline" href="mailto:kontakt@odniesukces.pl?subject=Kontakt%20ze%20strony">Wyślij przez maila</a>
+</div>
+<p id="formNote" class="form-note" aria-live="polite"></p>
+</form>
+</section>
+</main>
+<footer class="site-footer">
+<div class="container">
+<p>© <span id="year"></span> OdnieśSukces — projekt edukacyjny. Wszystkie kursy mają charakter fikcyjny.</p>
+</div>
+</footer>
+<div id="purchaseModal" class="modal" aria-hidden="true">
+<div class="modal-panel">
+<button class="modal-close" aria-label="Zamknij">✕</button>
+<h3 id="modalTitle">Kup kurs</h3>
+<p id="modalBody">To tylko demo — zakup nie jest aktywny.</p>
+<button class="btn modal-confirm">OK</button>
+</div>
+</div>
+<div id="modalBackdrop" class="backdrop" aria-hidden="true"></div>
+<script>
+document.addEventListener("DOMContentLoaded",()=>{
+document.getElementById("year").textContent=new Date().getFullYear();
+const menuBtn=document.querySelector(".menu-toggle");
+const nav=document.querySelector(".nav");
+if(menuBtn){menuBtn.addEventListener("click",()=>{nav.style.display=nav.style.display==="flex"?"none":"flex";});}
+const modal=document.getElementById("purchaseModal");
+const backdrop=document.getElementById("modalBackdrop");
+const title=document.getElementById("modalTitle");
+const body=document.getElementById("modalBody");
+const closeBtn=modal.querySelector(".modal-close");
+const confirmBtn=modal.querySelector(".modal-confirm");
+function openModal(course){title.textContent=course;body.textContent=`Dziękujemy za zainteresowanie kursem „${course}”. To tylko wersja demonstracyjna – zakup nie jest aktywny.`;modal.style.display="flex";backdrop.style.display="block";}
+function closeModal(){modal.style.display="none";backdrop.style.display="none";}
+document.querySelectorAll(".buy-btn").forEach(btn=>{btn.addEventListener("click",()=>openModal(btn.dataset.title));});
+closeBtn.addEventListener("click",closeModal);
+confirmBtn.addEventListener("click",closeModal);
+backdrop.addEventListener("click",closeModal);
+const form=document.getElementById("contactForm");
+const note=document.getElementById("formNote");
+form.addEventListener("submit",e=>{e.preventDefault();const data=new FormData(form);note.textContent=`Dziękujemy ${data.get("name")}! Twoja wiadomość została przygotowana (demo).`;form.reset();});
+});
+</script>
+</body>
+</html>
